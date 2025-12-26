@@ -22,6 +22,10 @@
     z-index: 1;
     display: block;
     background: url(../assets/first-screen-bg.svg) center bottom / 870px no-repeat;
+
+    @include laptop {
+      background-position: center bottom -140px;
+    }
   }
 
   &__wrapper {
@@ -108,14 +112,18 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 138%;
-        color: #5c7bbd;
+        color: #292b32;
         border: none;
         border-radius: 50px;
         outline-color: #3364cd;
         background-color: rgba(51, 100, 205, 0.04);
-        transition-property: outline;
+        transition-property: color;
         transition-timing-function: ease-out;
-        transition-duration: 0.5s;
+        transition-duration: 0.2s;
+
+        @include tablet {
+          font-size: 14px;
+        }
 
         &[type='text'] {
           flex: 0 0 126px;
@@ -170,7 +178,14 @@
         border: none;
         border-radius: 100px;
         background-color: #3364cd;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
         cursor: pointer;
+
+        &:hover {
+          background-color: #5c83d7;
+        }
 
         &::after {
           content: '';

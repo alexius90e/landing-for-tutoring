@@ -69,6 +69,11 @@ img {
   display: block;
   background: url(../assets/first-screen-bg.svg) center bottom/870px no-repeat;
 }
+@media (max-width: 1024px) {
+  .first-screen::before {
+    background-position: center bottom -140px;
+  }
+}
 .first-screen__wrapper {
   position: relative;
   z-index: 10;
@@ -169,17 +174,22 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 138%;
-  color: #5c7bbd;
+  color: #292b32;
   border: none;
   border-radius: 50px;
   outline-color: #3364cd;
   background-color: rgba(51, 100, 205, 0.04);
-  -webkit-transition-property: outline;
-  transition-property: outline;
+  -webkit-transition-property: color;
+  transition-property: color;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+@media (max-width: 768px) {
+  .first-screen__form-controls-input {
+    font-size: 14px;
+  }
 }
 .first-screen__form-controls-input[type=text] {
   -webkit-box-flex: 0;
@@ -264,7 +274,16 @@ img {
   border: none;
   border-radius: 100px;
   background-color: #3364cd;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   cursor: pointer;
+}
+.first-screen__form-submit-button:hover {
+  background-color: #5c83d7;
 }
 .first-screen__form-submit-button::after {
   content: "";
