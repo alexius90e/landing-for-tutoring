@@ -1,2 +1,29 @@
 .footer {
+  &__nav {
+    &-block {
+      &-title {
+      }
+
+      &-menu {
+        &-item {
+          &-link {
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    &-agreement {
+      &-link {
+      }
+    }
+
+    &-social {
+      &-link {
+        &-image {
+        }
+      }
+    }
+  }
 }

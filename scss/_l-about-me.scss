@@ -1,3 +1,45 @@
 .about-me {
-  
+  &__title {
+  }
+
+  &__main {
+  }
+
+  &__author {
+    &-image {
+    }
+
+    &-info {
+      &-name {
+      }
+
+      &-role {
+      }
+    }
+  }
+
+  &__cv {
+    &-message {
+      
+    }
+
+    &-list {
+      &-item {
+        &-title {
+
+        }
+
+        &-description {
+          
+        }
+      }
+    }
+
+    &-consult {
+      &-button {
+
+      }
+
+    }
+  }
 }

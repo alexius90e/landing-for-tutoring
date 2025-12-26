@@ -1,3 +1,43 @@
 .reviews {
-  
+  &__title {
+
+  }
+
+  &__slider {
+
+  }
+
+  &__slide {
+    &-title {
+
+    }
+
+    &-info {
+      &-tag {
+
+      }
+
+      &-date {
+
+      }
+    }
+
+    &-author {
+      &-photo {
+        &-image {
+
+        }
+      }
+
+      &-info {
+        &-name {
+
+        }
+
+        &-role {
+          
+        }
+      }
+    }
+  }
 }

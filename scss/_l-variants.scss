@@ -1,3 +1,46 @@
 .variants {
-  
+  &__title {
+  }
+
+  &__main {
+  }
+
+  &__first {
+    &-title {
+    }
+
+    &-description {
+    }
+  }
+
+  &__second {
+    &-title {
+    }
+
+    &-description {
+    }
+
+    &-families {
+    }
+  }
+
+  &__decision {
+    &-figure {
+      &-image {
+      }
+    }
+
+    &-content {
+      &-families {
+      }
+
+      &-text {
+      }
+
+      &-book {
+        &-button {
+        }
+      }
+    }
+  }
 }
