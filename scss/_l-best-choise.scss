@@ -1,35 +1,197 @@
 .best-choise {
-  &__wrapper {
+  padding: 96px 0;
 
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
   }
 
   &__heading {
-    &-title {
+    flex: 0 0 438px;
 
+    @include desktop {
+      flex: 0 0 400px;
+    }
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
+    &-title {
+      margin: 32px 0 18px;
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 110%;
+      letter-spacing: -0.01em;
+      color: #292b32;
+
+      @include laptop {
+        font-size: 36px;
+      }
+
+      @include tablet {
+        margin: 18px 0;
+        font-size: 30px;
+      }
     }
 
     &-description {
-      &-mark {
+      margin: 0;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      color: #292b32;
 
+      @include laptop {
+        font-size: 20px;
+      }
+
+      @include tablet {
+        margin: 0 0 4px;
+        font-size: 15px;
+      }
+
+      &-mark {
+        font-weight: 500;
+        color: #3364cd;
       }
     }
   }
 
   &__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    gap: 20px;
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
     &-card {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(100% / 2 - 20px / 2);
+      max-width: calc(100% / 2 - 20px / 2);
+      padding: 32px;
+      box-sizing: border-box;
+      border-radius: 32px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #0d1c3f;
+
+      @include desktop {
+        padding: 32px 24px;
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+        max-width: none;
+        border-radius: 16px;
+      }
+
+      &:nth-child(1) {
+        min-height: 414px;
+        background-image: url(../assets/best-choise-card-bg-1.jpg);
+
+        @include desktop {
+          min-height: auto;
+        }
+      }
+
+      &:nth-child(2) {
+        min-height: 414px;
+        background-image: url(../assets/best-choise-card-bg-2.jpg);
+
+        @include desktop {
+          min-height: auto;
+        }
+      }
+
+      &:nth-child(4) {
+        background-image: url(../assets/best-choise-card-bg-3.jpg);
+      }
+
       &-title {
-        
+        margin: 0 0 16px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: #fff;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+
+        @include laptop {
+          font-size: 28px;
+        }
+
+        @include tablet {
+          margin-bottom: 8px;
+          font-size: 22px;
+        }
       }
 
       &-description {
+        flex: 1 1 auto;
+        margin: 0 0 34px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #fff;
+
+        @include tablet {
+          margin-bottom: 24px;
+          font-size: 14px;
+        }
+
         &-mark {
-          
+          font-weight: 600;
         }
       }
 
       &-more {
         &-button {
+          display: inline-block;
+          padding: 14px 24px 16px;
+          box-sizing: border-box;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 138%;
+          text-align: center;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50px;
+          backdrop-filter: blur(6px);
+          background-color: rgba(255, 255, 255, 0.2);
+          transition-property: background-color;
+          transition-timing-function: ease-out;
+          transition-duration: 0.2s;
+          cursor: pointer;
 
+          @include tablet {
+            width: 100%;
+            padding: 12px 32px;
+            font-size: 14px;
+          }
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+          }
         }
       }
     }

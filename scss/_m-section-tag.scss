@@ -1,3 +1,19 @@
 .section-tag {
-  
+  display: block;
+  flex: 0 0 auto;
+  width: fit-content;
+  padding: 10px 16px 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 138%;
+  text-align: center;
+  color: #3364cd;
+  border: 1px solid #3364cd;
+  border-radius: 50px;
+
+  @include tablet {
+    padding: 4px 10px 6px;
+    font-size: 14px;
+    line-height: 150%;
+  }
 }
