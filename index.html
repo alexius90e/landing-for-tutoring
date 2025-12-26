@@ -6,6 +6,7 @@
     <title>Title</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/imask.js" defer></script>
     <script type="module" src="./js/index.js" defer></script>
   </head>
 
@@ -32,33 +33,41 @@
     <main class="main">
       <section class="first-screen">
         <div class="container">
-          <h2 class="first-screen__title">
-            Ваш ребёнок сдаст <mark class="first-screen__title-mark">ЕГЭ</mark> по химии на 80+
-            баллов или <mark class="first-screen__title-mark">ОГЭ</mark> на «5»
-          </h2>
+          <div class="first-screen__wrapper">
+            <h2 class="first-screen__title">
+              Ваш ребёнок сдаст <mark class="first-screen__title-mark">ЕГЭ</mark> по химии на 80+
+              баллов или <mark class="first-screen__title-mark">ОГЭ</mark> на «5»
+            </h2>
 
-          <div class="first-screen__description">
-            За 5 лет 87 моих учеников поступили в медицинские и химические вузы. Средний балл ЕГЭ —
-            82. По ОГЭ — 94% «пятёрок». Расскажу, как я этого добиваюсь
-          </div>
+            <div class="first-screen__description">
+              За 5 лет 87 моих учеников поступили в медицинские и химические вузы. Средний балл ЕГЭ
+              — 82. По ОГЭ — 94% «пятёрок». Расскажу, как я этого добиваюсь
+            </div>
 
-          <form class="first-screen__form">
-            <fieldset class="first-screen__form-controls">
-              <input class="first-screen__form-controls-input" type="text" placeholder="Ваше имя" />
-              <input
-                class="first-screen__form-controls-input"
-                type="text"
-                placeholder="+7 (000) 000-00-00"
-              />
-            </fieldset>
-            <fieldset class="first-screen__form-submit">
-              <button class="first-screen__form-submit-button">Получить консультацию</button>
-            </fieldset>
-          </form>
+            <form class="first-screen__form">
+              <fieldset class="first-screen__form-controls">
+                <input
+                  class="first-screen__form-controls-input"
+                  type="text"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input
+                  class="first-screen__form-controls-input"
+                  type="tel"
+                  placeholder="+7 (000) 000-00-00"
+                  required
+                />
+              </fieldset>
+              <fieldset class="first-screen__form-submit">
+                <button class="first-screen__form-submit-button">Получить консультацию</button>
+              </fieldset>
+            </form>
 
-          <div class="first-screen__disclaimer">
-            Нажимая на кнопку «Получить консультацию», вы соглашаетесь с
-            <a class="first-screen__disclaimer-link" href="#">политикой конфиденциальности</a>
+            <div class="first-screen__disclaimer">
+              Нажимая на кнопку «Получить консультацию», вы соглашаетесь с
+              <a class="first-screen__disclaimer-link" href="#">политикой конфиденциальности</a>
+            </div>
           </div>
         </div>
       </section>

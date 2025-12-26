@@ -1,32 +1,205 @@
 .first-screen {
-  
-  &__title {
-    &-mark {
+  position: relative;
+  padding: 162px 0 446px;
+  background: linear-gradient(
+    180deg,
+    rgba($color: #b7cefd, $alpha: 0.2) 0%,
+    rgba($color: #0045d7, $alpha: 0.2) 100%
+  );
 
+  @include laptop {
+    padding: 140px 0 70px;
+  }
+
+  @include tablet {
+    padding: 107px 0 51px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    background: url(../assets/first-screen-bg.svg) center bottom / 870px no-repeat;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 894px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0 0 22px;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #292b32;
+
+    @include laptop {
+      font-size: 48px;
+    }
+
+    @include tablet {
+      margin-bottom: 16px;
+      font-size: 30px;
+    }
+
+    &-mark {
+      background-color: #cce8cd;
     }
   }
 
   &__description {
-    
+    margin: 0 0 42px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #292b32;
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
   }
 
   &__form {
-    &-controls {
-      &-input {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 674px;
+    margin: 0 auto 16px;
 
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    &-controls {
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      gap: 6px;
+      padding: 6px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 100px;
+      background-color: #ffffff;
+
+      @include tablet {
+        flex-wrap: wrap;
+        border-radius: 16px;
+      }
+
+      &-input {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 16px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 138%;
+        color: #5c7bbd;
+        border: none;
+        border-radius: 50px;
+        outline-color: #3364cd;
+        background-color: rgba(51, 100, 205, 0.04);
+        transition-property: outline;
+        transition-timing-function: ease-out;
+        transition-duration: 0.5s;
+
+        &[type='text'] {
+          flex: 0 0 126px;
+
+          @include laptop {
+            flex: 0 0 calc(100% / 2 - 6px / 2);
+          }
+
+          @include tablet {
+            flex: 1 1 100%;
+          }
+        }
+
+        &[type='tel'] {
+          padding-left: 52px;
+          background: rgba(51, 100, 205, 0.04) url(../assets/icons/flag-rus.svg) left 16px center /
+            24px no-repeat;
+
+          @include laptop {
+            flex: 0 0 calc(100% / 2 - 6px / 2);
+          }
+
+          @include tablet {
+            flex: 1 1 100%;
+          }
+        }
+
+        &::placeholder {
+          color: #5c7bbd;
+        }
       }
     }
     &-submit {
+      flex: 1 0 auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+
       &-button {
-        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 14px 24px 16px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 138%;
+        text-align: center;
+        color: #fff;
+        border: none;
+        border-radius: 100px;
+        background-color: #3364cd;
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 24px;
+          aspect-ratio: 1;
+          background: url(../assets/icons/bulb.svg) center / cover no-repeat;
+        }
       }
     }
   }
 
   &__disclaimer {
-    &-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #292b32;
 
+    @include tablet {
+      font-size: 12px;
+    }
+
+    &-link {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: #3364cd;
     }
   }
-
 }
