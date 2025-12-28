@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <script type="module" src="./js/imask.js" defer></script>
-    <script type="module" src="./js/index.js" defer></script>
+    <script src="./js/imask.js" defer></script>
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/index.js" defer></script>
   </head>
 
   <body>
@@ -203,50 +205,66 @@
           </h2>
 
           <div class="training-system__cards">
-            <div class="training-system__card">
-              <div class="training-system__card-id">1</div>
-              <div class="training-system__card-time">1 день</div>
-              <div class="training-system__card-title">Диагностика на реальных задачах</div>
-              <div class="training-system__card-description">
-                Не просто тест, а глубинное интервью. Я определяю не только пробелы, но и тип
-                мышления ученика.
-              </div>
-              <div class="training-system__card-result">
-                <div class="training-system__card-result-title">Результат:</div>
-                <div class="training-system__card-result-description">
-                  вы получаете PDF-отчёт с прогнозом балла и пошаговым планом исправления ситуации.
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="training-system__card">
+                    <div class="training-system__card-id">1</div>
+                    <div class="training-system__card-time">1 день</div>
+                    <div class="training-system__card-title">Диагностика на реальных задачах</div>
+                    <div class="training-system__card-description">
+                      Не просто тест, а глубинное интервью. Я определяю не только пробелы, но и тип
+                      мышления ученика.
+                    </div>
+                    <div class="training-system__card-result">
+                      <span class="training-system__card-result-title">Результат:</span>
+                      <span class="training-system__card-result-description">
+                        вы получаете PDF-отчёт с прогнозом балла и пошаговым планом исправления
+                        ситуации.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="training-system__card">
+                    <div class="training-system__card-id">2</div>
+                    <div class="training-system__card-time">1-4 месяц</div>
+                    <div class="training-system__card-title">Умная теория</div>
+                    <div class="training-system__card-description">
+                      Никаких скучных конспектов. Только интерактивные схемы и авторские
+                      мнемонические правила. Ваш ребёнок за 3 занятия поймёт то, что не понимал в
+                      школе 2 года.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="training-system__card">
+                    <div class="training-system__card-id">3</div>
+                    <div class="training-system__card-time">5-7 месяц</div>
+                    <div class="training-system__card-title">Алгоритм решения</div>
+                    <div class="training-system__card-description">
+                      Превращаю сложные задачи в простые шаги. Например, задача № 34 разбивается на
+                      несколько простых действий, которые невозможно забыть на экзамене.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="training-system__card">
+                    <div class="training-system__card-id">4</div>
+                    <div class="training-system__card-time">8 месяц</div>
+                    <div class="training-system__card-title">Финальный спринт</div>
+                    <div class="training-system__card-description">
+                      Пишем 15 полноценных пробников. Отрабатываем не только знания, но и скорость,
+                      стрессоустойчивость и тайм-менеджмент. К экзамену выходим на «автомат».
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="training-system__card">
-              <div class="training-system__card-id">2</div>
-              <div class="training-system__card-time">1-4 месяц</div>
-              <div class="training-system__card-title">Умная теория</div>
-              <div class="training-system__card-description">
-                Никаких скучных конспектов. Только интерактивные схемы и авторские мнемонические
-                правила. Ваш ребёнок за 3 занятия поймёт то, что не понимал в школе 2 года.
-              </div>
-            </div>
-
-            <div class="training-system__card">
-              <div class="training-system__card-id">3</div>
-              <div class="training-system__card-time">5-7 месяц</div>
-              <div class="training-system__card-title">Финальный спринт</div>
-              <div class="training-system__card-description">
-                Пишем 15 полноценных пробников. Отрабатываем не только знания, но и скорость,
-                стрессоустойчивость и тайм-менеджмент. К экзамену выходим на «автомат».
-              </div>
-            </div>
-
-            <div class="training-system__card">
-              <div class="training-system__card-id">4</div>
-              <div class="training-system__card-time">8 месяц</div>
-              <div class="training-system__card-title">Диагностика на реальных задачах</div>
-              <div class="training-system__card-description">
-                Не просто тест, а глубинное интервью. Я определяю не только пробелы, но и тип
-                мышления ученика.
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -260,7 +278,7 @@
 
           <div class="about-me__main">
             <figure class="about-me__author">
-              <img class="about-me__author-image" src="./assets/author.png" alt="photo" />
+              <img class="about-me__author-image" src="./assets/author.jpg" alt="photo" />
 
               <figcaption class="about-me__author-info">
                 <div class="about-me__author-info-name">Евгений Гончаров</div>
@@ -299,8 +317,8 @@
                 </li>
               </ul>
 
-              <div class="about-me__consult">
-                <button class="about-me__consult-button">Консультация</button>
+              <div class="about-me__cv-consult">
+                <button class="about-me__cv-consult-button">Консультация</button>
               </div>
             </div>
           </div>

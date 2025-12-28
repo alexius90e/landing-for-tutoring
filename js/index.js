@@ -5,3 +5,15 @@ const maskOptions = {
 const phoneInputs = document.querySelectorAll(`input[type="tel"]`);
 
 phoneInputs.forEach((inputElement) => IMask(inputElement, maskOptions));
+
+const trainingSystemSwiper = document.querySelector('.training-system .swiper');
+
+if (trainingSystemSwiper) {
+  const swiper = new Swiper(trainingSystemSwiper, {
+    loop: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+}
