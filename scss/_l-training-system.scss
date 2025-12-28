@@ -28,6 +28,14 @@
     display: block;
 
     & .swiper {
+      &-wrapper {
+        @include tablet {
+          flex-wrap: wrap;
+          gap: 12px;
+          transform: none !important;
+        }
+      }
+
       &-slide {
         max-width: calc(100% / 4 - 20px / 4 * 3);
         width: 100%;
@@ -37,12 +45,27 @@
           max-width: calc(100% / 2 - 20px / 2);
         }
 
+        @include tablet {
+          flex: 1 1 100%;
+          max-width: none;
+          margin: 0 !important;
+        }
+
         &-active {
           max-width: calc(100% / 2 - 20px / 2);
+
+          @include tablet {
+            flex: 1 1 100%;
+            max-width: none;
+          }
         }
 
         & .training-system__card {
           padding: 32px 24px;
+
+          @include tablet {
+            padding: 24px;
+          }
 
           &-description {
             display: -webkit-box;
@@ -53,11 +76,19 @@
 
           &-result {
             display: none;
+
+            @include tablet {
+              display: block;
+            }
           }
         }
 
         &-active .training-system__card {
           padding: 32px;
+
+          @include tablet {
+            padding: 24px;
+          }
 
           &-description {
             display: block;
@@ -103,7 +134,7 @@
       width: fit-content !important;
       margin: 32px auto 0;
 
-      @include tablet {
+      @include laptop {
         display: none;
       }
 
@@ -129,6 +160,10 @@
     border-radius: 32px;
     background-color: #eaeffa;
 
+    @include tablet {
+      min-height: auto;
+    }
+
     & > * {
       position: relative;
       z-index: 10;
@@ -145,6 +180,11 @@
       text-align: center;
       color: #3364cd;
       opacity: 0.05;
+
+      @include tablet {
+        font-size: 190px;
+        line-height: 140px;
+      }
     }
 
     &-time {
@@ -169,6 +209,11 @@
       line-height: 130%;
       letter-spacing: -0.01em;
       color: #292b32;
+
+      @include tablet {
+        margin-bottom: 8px;
+        font-size: 22px;
+      }
     }
 
     &-description {

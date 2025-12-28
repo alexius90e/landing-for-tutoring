@@ -1,41 +1,132 @@
 .reviews {
-  &__title {
+  padding: 96px 0;
+  border-radius: 64px 64px 0 0;
+  background-color: #0d1c3f;
 
+  @include laptop {
+    padding: 60px 0;
+    border-radius: 32px 32px 0 0;
+  }
+
+  &__title {
+    margin: 32px 0 56px;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #fff;
+
+    @include laptop {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      margin: 18px 0 24px;
+      font-size: 30px;
+    }
   }
 
   &__slider {
-
+    display: block;
   }
 
   &__slide {
-    &-title {
+    display: flex;
+    flex-direction: column;
+    min-height: 412px;
+    padding: 30px 27px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    background-color: #ffffff;
 
+    @include tablet {
+      min-height: 400px;
+    }
+    
+    &::after {
+      content: '';
+      display: block;
+      flex: 1 1 auto;
+      order: 1;
+    }
+
+    &-title {
+      order: 0;
+      margin: 0 0 16px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 140%;
+      color: #292b32;
     }
 
     &-info {
-      &-tag {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      order: 0;
 
+
+      &-tag {
+        padding: 6px 12px 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 138%;
+        text-align: center;
+        color: #56b359;
+        border: 1px solid #56b359;
+        border-radius: 50px;
       }
 
       &-date {
-
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: -0.01em;
+        color: #292b32;
       }
     }
 
     &-author {
-      &-photo {
-        &-image {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      order: 10;
+      margin: 16px 0 0 ;
 
+      &-photo {
+        flex: 0 0 auto;
+        margin: 0;
+        border: 3px solid #c1d0f0;
+        border-radius: 50px;
+        overflow: hidden;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
         }
       }
 
       &-info {
-        &-name {
+        
 
+        &-name {
+          margin: 0 0 4px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 125%;
+          letter-spacing: -0.01em;
+          color: #292b32;
         }
 
         &-role {
-          
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: -0.01em;
+          color: #292b32;
         }
       }
     }
