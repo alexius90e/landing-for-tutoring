@@ -34,9 +34,9 @@ if (trainingSystemSwiper && trainingSystemPagination) {
 }
 
 const reviewsSwiper = document.querySelector('.reviews .swiper');
-const reviewsPagination = document.querySelector('.reviews__cards-pagination');
-const reviewsPrev = document.querySelector('.reviews__cards-prev');
-const reviewsNext = document.querySelector('.reviews__cards-next');
+const reviewsPagination = document.querySelector('.reviews__slider-controls-pagination');
+const reviewsPrev = document.querySelector('.reviews__slider-controls-buttons-prev');
+const reviewsNext = document.querySelector('.reviews__slider-controls-buttons-next');
 
 if (reviewsSwiper) {
   const swiper = new Swiper(reviewsSwiper, {
@@ -56,12 +56,15 @@ if (reviewsSwiper) {
         slidesPerView: 3,
       },
     },
+    navigation: {
+      nextEl: reviewsNext,
+      prevEl: reviewsPrev,
+    },
     pagination: {
-      el: trainingSystemPagination,
+      el: reviewsPagination,
     },
   });
 }
-
 
 const faqItems = document.querySelectorAll('.faq__card');
 

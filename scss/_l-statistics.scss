@@ -1,9 +1,11 @@
 .statistics {
+  margin: 0 15px;
   padding: 96px 0;
   border-radius: 64px;
   background-color: #0d1c3f;
 
   @include laptop {
+    margin: 0;
     padding: 60px 0;
     border-radius: 32px;
   }
