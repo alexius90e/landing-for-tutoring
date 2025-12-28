@@ -6,6 +6,27 @@ const phoneInputs = document.querySelectorAll(`input[type="tel"]`);
 
 phoneInputs.forEach((inputElement) => IMask(inputElement, maskOptions));
 
+const header = document.querySelector('.header');
+
+if (header) {
+  header.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isBurger = event.target.classList.contains('header__burger-button');
+    const isConsult = event.target.classList.contains('header__consult-button');
+    const isLink = event.target.classList.contains('header__nav-link');
+
+    console.log(isConsult);
+
+    if (isBurger) {
+      event.currentTarget.classList.add('active');
+    }
+
+    if (isLayout || isConsult || isLink) {
+      event.currentTarget.classList.remove('active');
+    }
+  });
+}
+
 const trainingSystemSwiper = document.querySelector('.training-system .swiper');
 const trainingSystemPagination = document.querySelector('.training-system__cards-pagination');
 
