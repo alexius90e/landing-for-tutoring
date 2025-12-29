@@ -30,7 +30,7 @@
           </nav>
 
           <div class="header__consult">
-            <button class="header__consult-button">Консультация</button>
+            <button class="header__consult-button consult-button">Консультация</button>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
                 />
               </fieldset>
               <fieldset class="first-screen__form-submit">
-                <button class="first-screen__form-submit-button">Получить консультацию</button>
+                <button class="first-screen__form-submit-button consult-button">Получить консультацию</button>
               </fieldset>
             </form>
 
@@ -104,7 +104,7 @@
                   <b class="best-choise__info-card-description-mark">уже после 1-го занятия</b>
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
                 </div>
               </div>
 
@@ -117,7 +117,7 @@
                   курсе всего
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
                 </div>
               </div>
 
@@ -130,7 +130,7 @@
                   учебниках
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
                 </div>
               </div>
 
@@ -142,7 +142,7 @@
                   на экзамене и приносят дополнительные 12–15 баллов
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
                 </div>
               </div>
             </div>
@@ -333,7 +333,7 @@
               </ul>
 
               <div class="about-me__cv-consult">
-                <button class="about-me__cv-consult-button">Консультация</button>
+                <button class="about-me__cv-consult-button consult-button">Консультация</button>
               </div>
             </div>
           </div>
@@ -605,7 +605,7 @@
                   определим точные пробелы и я скажу, как их закрыть.
                 </div>
                 <div class="variants__decision-content-book">
-                  <button class="variants__decision-content-book-button">
+                  <button class="variants__decision-content-book-button consult-button">
                     Забронировать место (осталось 2 из 25)
                   </button>
                 </div>
@@ -699,5 +699,62 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__body">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+          <div class="modal__title"><span>23</span> Бесплатных мест <br> на эту неделю уже занято</div>
+          <div class="modal__description">
+            Доступны также занятия в мини-группах 3–4 человека. Набираем группу со скидкой
+          </div>
+
+          <form class="modal__form">
+            <label class="modal__form-item">
+              <div class="modal__form-item-label">Ваше ФИО</div>
+              <div class="modal__form-item-control">
+                <input
+                  class="modal__form-item-control-input"
+                  type="text"
+                  name="name"
+                  placeholder="Имя"
+                  required
+                />
+                <button class="modal__form-item-control-reset"></button>
+              </div>
+            </label>
+
+            <label class="modal__form-item">
+              <div class="modal__form-item-label">Номер телефона</div>
+              <div class="modal__form-item-control">
+                <input
+                  class="modal__form-item-control-input"
+                  type="tel"
+                  name="phone"
+                  pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$" 
+                  placeholder="+7(999)-555-35-35"
+                  required
+                />
+                <button class="modal__form-item-control-reset"></button>
+              </div>
+            </label>
+
+            <label class="modal__form-agreement">
+              <input class="modal__form-agreement-input" type="checkbox" name="agreement" required/>
+              <div class="modal__form-agreement-label">
+                Я Согласен с
+                <a class="modal__form-agreement-label-link" href="#">
+                  Политикой конфиденциальности
+                </a>
+              </div>
+            </label>
+
+            <fieldset class="modal__form-submit">
+              <button class="modal__form-submit-button">Выберите уверенность</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

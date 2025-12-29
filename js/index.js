@@ -123,3 +123,67 @@ function updateFaqItem(faqItem) {
     panel.style.maxHeight = null;
   }
 }
+
+const modal = document.querySelector('.modal');
+
+if (modal) modal.addEventListener('click', handleModalClick);
+
+const consultButtons = document.querySelectorAll('.consult-button');
+
+consultButtons.forEach((consultButton) => consultButton.addEventListener('click', openModal));
+
+function openModal() {
+  if (!modal) return;
+  modal.classList.add('active');
+}
+
+function closenModal() {
+  if (!modal) return;
+  modal.classList.remove('active');
+}
+
+function handleModalClick(event) {
+  const isClose = event.target.classList.contains('modal__close');
+  const isReset = event.target.classList.contains('modal__form-item-control-reset');
+  const isLayout = event.target === event.currentTarget;
+
+  if (isClose || isLayout) closenModal();
+
+  if (isReset) {
+    const wrapper = event.target.closest('.modal__form-item-control');
+    const input = wrapper.querySelector('.modal__form-item-control-input');
+    if (input) input.value = '';
+  }
+}
+
+const modalForm = document.querySelector('.modal__form');
+
+if (modalForm) {
+  modalForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const submitter = event.submitter;
+    if (submitter.classList.contains('modal__form-submit-button')) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      fetch('mail.php', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          if (result.status === 'success') {
+            console.log('✅ Заявка отправлена!');
+            form.reset();
+            closenModal();
+          } else {
+            console.error('❌ Ошибка: ' + result.message);
+          }
+        })
+        .catch((error) => {
+          console.error('❌ Ошибка сети: ' + error);
+        });
+    }
+  });
+}
