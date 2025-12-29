@@ -63,8 +63,320 @@
   }
 
   &__info {
-    &-card {
-      color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'block1 block2 block3 block3'
+      'block1 block4 block4 block5';
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 125px 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        'block1 block1 block1'
+        'block2 block3 block3'
+        'block5 block3 block3'
+        'block4 block4 block4';
+      gap: 8px;
+    }
+
+    & > * {
+      border-radius: 32px;
+
+      @include laptop {
+        border-radius: 24px;
+      }
+
+      @include tablet {
+        border-radius: 16px;
+      }
+    }
+
+    &-rates {
+      grid-area: block1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px;
+      background: url(../assets/average-rate-bg.jpg) center / cover no-repeat;
+
+      @include laptop {
+        padding: 24px;
+      }
+
+      @include tablet {
+        padding: 68px 16px 16px;
+      }
+
+      &-title {
+        margin: 0 0 16px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: #020206;
+
+        @include laptop {
+          margin-bottom: 12px;
+          font-size: 26px;
+        }
+
+        @include tablet {
+          margin-bottom: 8px;
+          font-size: 22px;
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        color: #020206;
+
+        @include laptop {
+          font-size: 15px;
+        }
+
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-percent {
+      grid-area: block2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 214px;
+      padding: 24px;
+      box-sizing: border-box;
+      background: url(../assets/graph.svg) center / cover no-repeat;
+      background-color: #6fcc71;
+
+      @include tablet {
+        min-height: 160px;
+        padding: 12px;
+      }
+
+      &-value {
+        margin: 0 0 12px;
+        font-weight: 500;
+        font-size: 72px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #fff;
+
+        @include laptop {
+          margin-bottom: 8px;
+          font-size: 48px;
+        }
+
+        @include tablet {
+          margin-bottom: 6px;
+          font-size: 30px;
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: #fff;
+
+        @include laptop {
+          font-size: 14px;
+        }
+
+        @include tablet {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-top {
+      grid-area: block3;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 4px;
+      overflow: hidden;
+      background-color: #eaeffa;
+
+      @include mobile {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-figure {
+        flex: 0 0 217px;
+
+        @include laptop {
+          flex: 0 0 180px;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      &-info {
+        padding: 32px;
+        padding-left: 0;
+
+        @include laptop {
+          padding: 24px;
+          padding-left: 0;
+        }
+
+        @include mobile {
+          padding: 0 8px 12px;
+        }
+
+        &-title {
+          margin: 0 0 16px;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 130%;
+          letter-spacing: -0.01em;
+          color: #020206;
+
+          @include laptop {
+            margin-bottom: 12px;
+            font-size: 26px;
+          }
+
+          @include tablet {
+            margin-bottom: 8px;
+            font-size: 22px;
+          }
+        }
+
+        &-text {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: #020206;
+
+          @include laptop {
+            font-size: 15px;
+          }
+
+          @include tablet {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &-materials {
+      grid-area: block4;
+      padding: 32px;
+      background: url(../assets/puzzle.svg) center right -24px no-repeat;
+      background-color: #eaeffa;
+
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      &-value {
+        margin: 0 0 16px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: #020206;
+
+        @include laptop {
+          margin-bottom: 12px;
+          font-size: 26px;
+        }
+
+        @include tablet {
+          margin-bottom: 8px;
+          font-size: 22px;
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #020206;
+
+        @include laptop {
+          font-size: 15px;
+        }
+
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-algoritms {
+      grid-area: block5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 214px;
+      padding: 24px;
+      box-sizing: border-box;
+      background: url(../assets/grid.svg) center / cover no-repeat;
+
+      @include tablet {
+        min-height: 160px;
+        padding: 12px 8px;
+      }
+
+      &-value {
+        margin: 0 0 12px;
+        font-weight: 500;
+        font-size: 72px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #fff;
+
+        @include laptop {
+          margin-bottom: 8px;
+          font-size: 48px;
+        }
+
+        @include tablet {
+          margin-bottom: 6px;
+          font-size: 30px;
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: #fff;
+
+        @include laptop {
+          font-size: 14px;
+        }
+
+        @include tablet {
+          font-size: 12px;
+        }
+      }
     }
   }
 }

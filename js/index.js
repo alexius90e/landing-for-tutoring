@@ -18,7 +18,7 @@ if (header) {
     console.log(isConsult);
 
     if (isBurger) {
-      event.currentTarget.classList.add('active');
+      event.currentTarget.classList.toggle('active');
     }
 
     if (isLayout || isConsult || isLink) {
