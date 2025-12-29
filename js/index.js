@@ -167,7 +167,7 @@ if (modalForm) {
       const form = event.target;
       const formData = new FormData(form);
 
-      fetch('mail.php', {
+      fetch('../mail.php', {
         method: 'POST',
         body: formData,
       })
