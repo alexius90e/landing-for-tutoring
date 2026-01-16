@@ -22,8 +22,6 @@
     width: calc(100% - 40px);
     padding: 12px 200px;
     box-sizing: border-box;
-
-    overflow: hidden;
     transform: translateX(-50%);
 
     @include desktop {

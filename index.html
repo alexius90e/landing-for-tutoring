@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -66,7 +66,10 @@
                 />
               </fieldset>
               <fieldset class="first-screen__form-submit">
-                <button class="first-screen__form-submit-button consult-button">Получить консультацию</button>
+                <button class="first-screen__form-submit-button consult-button">
+                  <span class="first-screen__form-submit-button-text">Получить консультацию</span>
+                  <span class="first-screen__form-submit-button-icon"></span>
+                </button>
               </fieldset>
             </form>
 
@@ -104,7 +107,9 @@
                   <b class="best-choise__info-card-description-mark">уже после 1-го занятия</b>
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">
+                    Узнать больше
+                  </button>
                 </div>
               </div>
 
@@ -117,7 +122,9 @@
                   курсе всего
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">
+                    Узнать больше
+                  </button>
                 </div>
               </div>
 
@@ -130,7 +137,9 @@
                   учебниках
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">
+                    Узнать больше
+                  </button>
                 </div>
               </div>
 
@@ -142,7 +151,9 @@
                   на экзамене и приносят дополнительные 12–15 баллов
                 </div>
                 <div class="best-choise__info-card-more">
-                  <button class="best-choise__info-card-more-button consult-button">Узнать больше</button>
+                  <button class="best-choise__info-card-more-button consult-button">
+                    Узнать больше
+                  </button>
                 </div>
               </div>
             </div>
@@ -152,7 +163,7 @@
 
       <section class="statistics" id="statistics">
         <div class="container">
-          <div class="section-tag">Цифры, которым можно верить</div>
+          <div class="section-tag section-tag_light">Цифры, которым можно верить</div>
 
           <div class="statistics__heading">
             <div class="statistics__heading-title">
@@ -342,7 +353,7 @@
 
       <section class="reviews" id="reviews">
         <div class="container">
-          <div class="section-tag">Отзывы</div>
+          <div class="section-tag section-tag_light">Отзывы</div>
 
           <h2 class="reviews__title">«Сдали! Поступили! Учимся!»</h2>
 
@@ -521,7 +532,7 @@
 
       <section class="faq" id="faq">
         <div class="container">
-          <div class="section-tag">FAQ</div>
+          <div class="section-tag section-tag_light">FAQ</div>
 
           <h2 class="faq__title">Часто задаваемые вопросы</h2>
 
@@ -704,7 +715,10 @@
       <div class="modal__body">
         <div class="modal__close"></div>
         <div class="modal__content">
-          <div class="modal__title"><span>23</span> Бесплатных мест <br> на эту неделю уже занято</div>
+          <div class="modal__title">
+            <span>23</span> Бесплатных мест <br />
+            на эту неделю уже занято
+          </div>
           <div class="modal__description">
             Доступны также занятия в мини-группах 3–4 человека. Набираем группу со скидкой
           </div>
@@ -731,7 +745,7 @@
                   class="modal__form-item-control-input"
                   type="tel"
                   name="phone"
-                  pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$" 
+                  pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
                   placeholder="+7(999)-555-35-35"
                   required
                 />
@@ -740,7 +754,12 @@
             </label>
 
             <label class="modal__form-agreement">
-              <input class="modal__form-agreement-input" type="checkbox" name="agreement" required/>
+              <input
+                class="modal__form-agreement-input"
+                type="checkbox"
+                name="agreement"
+                required
+              />
               <div class="modal__form-agreement-label">
                 Я Согласен с
                 <a class="modal__form-agreement-label-link" href="#">

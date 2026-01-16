@@ -256,6 +256,7 @@
           font-weight: 500;
           font-size: 16px;
           line-height: 100%;
+          letter-spacing: -0.04em;
           text-align: center;
           color: #fff;
           border: none;
@@ -269,7 +270,7 @@
           @include tablet {
             min-height: 48px;
             width: 100%;
-            padding: 12px 8px;
+            padding: 12px 12px 14px;
             font-size: 14px;
           }
 
